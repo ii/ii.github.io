@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[humans sharing technology]]></title>
+  <link href="http://www.instantinfrastructure.org/atom.xml" rel="self"/>
+  <link href="http://www.instantinfrastructure.org/"/>
+  <updated>2015-06-22T10:37:12-06:00</updated>
+  <id>http://www.instantinfrastructure.org/</id>
+  <author>
+    <name><![CDATA[Hippie Hacker]]></name>
+    <email><![CDATA[chris@hippiehacker.org]]></email>
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Provisioning and Testing on VMware vCloud Air With Chef]]></title>
+    <link href="http://www.instantinfrastructure.org/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef/"/>
+    <updated>2015-06-22T10:32:57-06:00</updated>
+    <id>http://www.instantinfrastructure.org/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+</feed>
