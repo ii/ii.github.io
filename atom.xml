@@ -4,7 +4,7 @@
   <title><![CDATA[humans sharing technology]]></title>
   <link href="http://ii.github.io/atom.xml" rel="self"/>
   <link href="http://ii.github.io/"/>
-  <updated>2015-06-22T11:26:26-06:00</updated>
+  <updated>2015-06-22T14:29:46-06:00</updated>
   <id>http://ii.github.io/</id>
   <author>
     <name><![CDATA[Hippie Hacker]]></name>
@@ -18,7 +18,15 @@
     <link href="http://ii.github.io/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef/"/>
     <updated>2015-06-22T10:32:57-06:00</updated>
     <id>http://ii.github.io/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p><a href="https://github.com/taylor">Taylor</a>@<a href="http://vulk.co">Vulk</a> and I teamed up with <a href="http://chef.io">Chef</a> to bring <a href="http://vcloud.vmware.com/">VMWare vCloud Air</a> support to the chef toolchain including knife, chef-provisioning, and test-kitchen.</p>
+
+<p>It&rsquo;s been a bit tricky with a few gotchas that we&rsquo;ve worked around, mosty around how authentication to the base images is configured.</p>
+
+<p><a href="https://github.com/ii/chef-provisioning/blob/vcair/docs/providers/vcair.md#vcloud-air-provider">Documentation</a> was created for the <a href="https://github.com/chef/chef-provisioning-fog/pull/107">vcair</a> support for <a href="https://github.com/chef/chef-provisioning-fog">chef-provisioning-fog</a></p>
+
+<p>We wrote <a href="https://github.com/vulk/kitchen-vcair">kitchen-vcair</a> to add support for <a href="http://kitchen.ci">test-kitchen</a></p>
+
+<p>Windows and linux vm walkthroughs where created for for <a href="https://github.com/vulk/chef-metal/blob/vcair/docs/providers/vcair.md#linux-vm-video-walkthru">chef-provisioning</a> and <a href="https://github.com/vulk/kitchen-vcair#walkthru-of-kitchen-vcair-for-linux-guests">test-kitchen</a>.</p>
 ]]></content>
   </entry>
   
