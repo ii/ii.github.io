@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Instant Infrastructure on USB - humans sharing technology</title>
+  <meta name="author" content="Hippie Hacker">
+
+  
+  <meta name="description" content="I make my living as a Computer-Chef. People hire me to prepare many computers along with their desired software and make it all come together &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://ii.github.io/blog/2013/01/10/instant-infrastructure-on-usb/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="humans sharing technology" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">humans sharing technology</a></h1>
+  
+    <h2>i+i=ii</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="sitesearch" value="ii.github.io">
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Instant Infrastructure on USB</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+<time class='entry-date' datetime='2013-01-10'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>I make my living as a Computer-Chef. People hire me to prepare many computers along with their desired software and make it all come together according to precise recipes. Like any chef, I like to prepare my recipes from scratch using only the finest ingredients. I also love sharing my recipes and teaching people to cook on their own.</p>
+
+<p>Preparing complex computing systems from scratch can be a pain&hellip; Where do you start? How do you know when you&rsquo;ve added just enough to produce what you set out to accomplish? Myself I like to start with known good ingredients, and sample or test my concoction along the way.</p>
+
+<p>In the world of computing, the from-scratch cooking process usually starts with bootable software like a CD/DVD from a vendor that makes the software that all other software runs on top of&hellip; the operating system (aka OS). Microsoft and Linux vendors make their software available via a special file called an ISO that you can burn to a CD. Most of the time people boot those CD&rsquo;s and manually use a mouse and keyboard to answer questions related to installing the OS before they get around to adding their own software to run on top, and then may spend hours configuring. If they ever need to do a restore, they have to go through all that process again. Backups could help in restoring, but if you wanted to share the software and configuration that you use with a friend or a peer/professional it can be a bit harder.</p>
+
+<p>I started working for Opscode four months ago because they make a software called Chef (notice the capital C) that runs on top of <em>just the OS</em> and it uses recipes to automatically install and configure any other software that you would want! Tying together installing the OS to the hardware and Chef to the OS all in one step is something we are starting to do fairly well in the cloud, but I often like to cook for friends in places where there might not be any internet.</p>
+
+<p>At Opscode I do a lot of Chef training. Teaching someone to cook without a kitchen is hard, so we developed a mobile teaching kitchen. My students connect to a special laptop that contains a mini-cloud with everything needed to spin up plenty of cloud-computers to teach the class. Setting up the laptop OS and software is quite a daunting task. I wanted it to be as easy as booting an OS CD and choosing a disk.</p>
+
+<p>Most bootable OS CD&rsquo;s run an installer that asks questions about what it should do. Luckily Windows and Linux allow you to provide a special file to answer to all the questions it might ask. There are also some hidden questions you don&rsquo;t see during a normal install like  &lsquo;What commands would you like to run during stage X of the install?&rsquo;. I&rsquo;ve used these hidden options to run commands that install Chef and run recipes to completely automate the installation of Linux and Windows, including all desired software and configuration.</p>
+
+<p>I&rsquo;ve done this recently on Windows using my <a href="http://hh.github.com/">windows-fromscratch</a> code. However, I&rsquo;ve also been using Linux for many years and like the idea of being able to give away working bootable USB&rsquo;s that can be used to deploy complex infrastructures from scratch. So I&rsquo;ve distilled that process down into a few cookbooks containing the recipes needed to automatically create those sticks. I&rsquo;ve created 2 cookbooks that are part of the :ii project.</p>
+
+<p>The first one is called <a href="https://github.com/hh/cookbook-ii-usb">ii-usb</a>. It starts by downloading and verifying the ISO for the OS (Ubuntu in this case), then formats a USB for booting and copies the ISO onto it. It then creates all the files necessary to pre-answer all the questions (except for which disk to format) and copies over Chef and any recipes I may want it to  use.</p>
+
+<p>The second cookbook is <a href="https://github.com/hh/cookbook-ii-ubiquity">ii-ubiquity</a>, during Ubuntu&rsquo;s install, it runs a program called Ubiquity. When the USB boots, it will run Chef with different recipes at different stages to configure such things as the boot-screen, background, wireless-passwords, hardware-specific drivers, etc. These can be configured by edited files on the USB stick (for now&hellip; I plan to provide a gui soon) and the only question asked is which drive to format.</p>
+
+<p>When the USB installer is done, the computer boots and runs Chef against a last set of recipes&hellip; in my case I have recipes for setting up the Opscode training laptop. I&rsquo;ve recorded a 9:30 long video of booting an ii-usb created USB stick installing the training-laptop I created for Opscode. For dramatic effect I switch to a black screen to show when Chef is running the recipes.</p>
+
+<p><a href="http://www.youtube.com/watch?v=FaukaaVwm2c">http://ww<wbr>w.youtube<wbr>.com/watc<wbr>h?v=Fauka<wbr>aVwm2c</a></p>
+
+<p>While none of this yet requires any other computers or internet, I see a possibility of booting a first computer with the stick that installs Chef Server and then boots / installs the rest via a local network. This is getting us closer to true instant infrastructure. Come hang out with us on our <a href="https://groups.google.com/forum/?fromgroups#!forum/ii-discuss">Forum</a> and lend a hand to bringing infrastructure to classrooms, libraries, clinics and hospitals all over the world.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Hippie Hacker</span></span>
+
+      
+
+
+
+
+<time class='entry-date' datetime='2013-01-10'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>10</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span> <span class='time'>12:00 am</span></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://ii.github.io/blog/2013/01/10/instant-infrastructure-on-usb/" data-via="hippiehacker" data-counturl="http://ii.github.io/blog/2013/01/10/instant-infrastructure-on-usb/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2012/07/31/this-is-ii/" title="Previous Post: Humanity to Everyone - htoe.org">&laquo; Humanity to Everyone - htoe.org</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/05/08/thiis-is-about-ii/" title="Next Post: thiis.is about ii">thiis.is about ii &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef/">Provisioning and Testing on VMware vCloud Air with Chef</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/08/thiis-is-about-ii/">thiis.is about ii</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/01/10/instant-infrastructure-on-usb/">Instant Infrastructure on USB</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2012/07/31/this-is-ii/">Humanity to Everyone - htoe.org</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/ii">@ii</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'ii',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Hippie Hacker -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

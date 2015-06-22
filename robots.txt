@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://www.instantinfrastructure.org/sitemap.xml 
+Sitemap: http://ii.github.io/sitemap.xml 
