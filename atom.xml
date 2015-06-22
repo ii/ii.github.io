@@ -4,7 +4,7 @@
   <title><![CDATA[humans sharing technology]]></title>
   <link href="http://ii.github.io/atom.xml" rel="self"/>
   <link href="http://ii.github.io/"/>
-  <updated>2015-06-22T11:27:27-06:00</updated>
+  <updated>2015-06-22T11:26:26-06:00</updated>
   <id>http://ii.github.io/</id>
   <author>
     <name><![CDATA[Hippie Hacker]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Provisioning and Testing on VMware vCloud Air with Chef]]></title>
+    <title type="html"><![CDATA[Provisioning and Testing on VMware vCloud Air With Chef]]></title>
     <link href="http://ii.github.io/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef/"/>
     <updated>2015-06-22T10:32:57-06:00</updated>
     <id>http://ii.github.io/blog/2015/06/22/provisioning-and-testing-on-vmware-vcloud-air-with-chef</id>
@@ -23,7 +23,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[thiis.is about ii]]></title>
+    <title type="html"><![CDATA[thiis.is About Ii]]></title>
     <link href="http://ii.github.io/blog/2013/05/08/thiis-is-about-ii/"/>
     <updated>2013-05-08T00:00:00-06:00</updated>
     <id>http://ii.github.io/blog/2013/05/08/thiis-is-about-ii</id>
